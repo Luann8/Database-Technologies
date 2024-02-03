@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Technologies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    h1 {
+      color: #00f;
+    }
+
+    h2 {
+      color: #55a;
+    }
+
+    a {
+      text-decoration: none;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    img {
+      max-width: 150px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Database Technologies</h1>
+
+<h2>Luann Pereira Mendes</h2>
+
+<!-- MySQL -->
+<a href="https://www.mysql.com/" target="_blank">
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+</a>
+
+<!-- PostgreSQL -->
+<a href="https://www.postgresql.org/" target="_blank">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-%230071C5.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+</a>
+
+<!-- SQLite -->
+<a href="https://www.sqlite.org/" target="_blank">
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+</a>
+
+<script>
+  document.addEventListener('click', function (e) {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+  });
+</script>
+
+</body>
+</html>
