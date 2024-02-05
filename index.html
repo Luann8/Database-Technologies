@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://www.svgrepo.com/show/231121/database.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <title>Database Technologies</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       text-align: center;
       padding: 20px;
       color: #333;
       transition: background-color 0.3s, color 0.3s;
+      background: linear-gradient(to right, #3494E6, #EC6EAD);
     }
 
     body.dark-mode {
@@ -25,46 +28,66 @@
 
     h2 {
       color: #55a;
+      margin-bottom: 20px;
     }
 
     a {
       text-decoration: none;
       margin: 10px;
       display: inline-block;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.05);
     }
 
     img {
-      max-width: 150px;
+      max-width: 600px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
+
 <body>
 
-<h1>Database Technologies</h1>
+  <h1>Database Technologies</h1>
 
-<h2>Luann Pereira Mendes</h2>
+  <h2>Luann Pereira Mendes</h2>
 
-<!-- MySQL -->
-<a href="https://www.mysql.com/" target="_blank">
-  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
-</a>
+  <!-- MySQL -->
+  <a href="https://www.mysql.com/" target="_blank">
+    <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+  </a>
 
-<!-- PostgreSQL -->
-<a href="https://www.postgresql.org/" target="_blank">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-%230071C5.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-</a>
+  <!-- PostgreSQL -->
+  <a href="https://www.postgresql.org/" target="_blank">
+    <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-%230071C5.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+  </a>
 
-<!-- SQLite -->
-<a href="https://www.sqlite.org/" target="_blank">
-  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
-</a>
+  <!-- SQLite -->
+  <a href="https://www.sqlite.org/" target="_blank">
+    <img alt="SQLite" src="https://img.shields.io/badge/SQLite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+  </a>
 
-<script>
-  document.addEventListener('click', function (e) {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-  });
-</script>
+   <!-- Additional Image -->
+   <div style="margin-top: 20px; display: flex; justify-content: center;">
+    <!-- Add your additional image here -->
+    <img src="https://th.bing.com/th/id/OIP.uMrbchuAw_s9Kb1JsjGn5AHaD4?w=1024&h=536&rs=1&pid=ImgDetMain" alt="Additional Image" style="width: 600px; border: 2px solid #ddd; border-radius: 5px;">
+    <!-- Example: -->
+  </div>
+
+  <script>
+    document.addEventListener('click', function (e) {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    });
+  </script>
 
 </body>
+
 </html>
