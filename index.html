@@ -2,108 +2,167 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="https://www.svgrepo.com/show/231121/database.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <title>Database Technologies</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      padding: 20px;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
-      background: linear-gradient(to right, #540c5c, #55a);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.svgrepo.com/show/231121/database.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Database Technologies</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(to right, #540c5c, #55a);
+            margin: 0;
+            padding-bottom: 50px;
+            /* Adicionando espaço para o rodapé */
+        }
 
-    body.dark-mode {
-      background-color: #333;
-      color: #fff;
-    }
+        p {
+            color: #333;
+            margin: 20px;
+        }
 
-    h1 {
-      color: rgb(255, 255, 255);
-    }
+        h1 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 20px;
+        }
 
-    h2 {
-      color: rgb(255, 255, 255);
-      margin-bottom: 20px;
-    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-    a {
-      text-decoration: none;
-      margin: 10px;
-      display: inline-block;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
+        .badge-button {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
 
-    a:hover {
-      transform: scale(1.05);
-    }
+        .badge-button:hover {
+            transform: scale(1.05);
+        }
 
-    img {
-      max-width: 600px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+        .info-box {
+            display: none;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        img {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        footer {
+            color: #fff;
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
 
-  <h1>Database Technologies</h1>
+    <h1>Database Technologies</h1>
 
-  <h2>Luann Pereira Mendes</h2>
+    <img src="https://e-tinet.com/wp-content/uploads/2018/11/servidor-proxy-o-que-2.png" alt="Additional Image">
 
-  <!-- MySQL -->
-  <a href="https://www.mysql.com/" target="_blank">
-    <img alt="MySQL" src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
-  </a>
+    <div class="container">
+        <!-- MySQL -->
+        <div class="badge-button" onclick="showInfo('mysql')">
+            <img alt="MySQL"
+                src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+        </div>
 
-  <!-- PostgreSQL -->
-  <a href="https://www.postgresql.org/" target="_blank">
-    <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-%230071C5.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-  </a>
+        <!-- PostgreSQL -->
+        <div class="badge-button" onclick="showInfo('postgresql')">
+            <img alt="PostgreSQL"
+                src="https://img.shields.io/badge/PostgreSQL-%230071C5.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+        </div>
 
-  <!-- SQLite -->
-  <a href="https://www.sqlite.org/" target="_blank">
-    <img alt="SQLite" src="https://img.shields.io/badge/SQLite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
-  </a>
-  
+        <!-- SQLite -->
+        <div class="badge-button" onclick="showInfo('sqlite')">
+            <img alt="SQLite"
+                src="https://img.shields.io/badge/SQLite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+        </div>
 
+        <!-- Azure SQL Database -->
+        <div class="badge-button" onclick="showInfo('azure')">
+            <img alt="Azure SQL Database"
+                src="https://img.shields.io/badge/Azure-%230078D4.svg?style=for-the-badge&logo=microsoft-azure&logoColor=white">
+        </div>
 
-  
-  <a href="https://azure.microsoft.com/en-us/services/sql-database/" target="_blank">
-  <img alt="Azure SQL Database" src="https://img.shields.io/badge/Azure-%230078D4.svg?style=for-the-badge&logo=microsoft-azure&logoColor=white">
-</a>
+        <!-- Amazon RDS -->
+        <div class="badge-button" onclick="showInfo('amazon')">
+            <img alt="Amazon RDS"
+                src="https://img.shields.io/badge/Amazon-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
+        </div>
 
-<!-- Amazon RDS -->
-<a href="https://aws.amazon.com/rds/" target="_blank">
-  <img alt="Amazon RDS" src="https://img.shields.io/badge/Amazon-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white">
-</a>
+        <!-- Google Cloud SQL -->
+        <div class="badge-button" onclick="showInfo('google')">
+            <img alt="Google Cloud SQL"
+                src="https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+        </div>
+    </div>
 
-<!-- Google Cloud SQL -->
-<a href="https://cloud.google.com/sql" target="_blank">
-  <img alt="Google Cloud SQL" src="https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
-</a>
-<!-- Additional Image -->
-<div style="margin-top: 20px; display: flex; justify-content: center;">
- <!-- Add your additional image here -->
-<img src="https://e-tinet.com/wp-content/uploads/2018/11/servidor-proxy-o-que-2.png" alt="Additional Image" style="width: 600px; border: 2px solid #ddd; border-radius: 5px;">
-<!-- Example: -->
-</div>
-
- 
-  <script>
-    document.addEventListener('click', function (e) {
-      const body = document.body;
-      body.classList.toggle('dark-mode');
-    });
-  </script>
+    <!-- Information Boxes -->
+    <div class="container">
+        <p id="mysqlInfo" class="info-box">MySQL is an open-source relational database management system (RDBMS). It is
+            widely used for web applications and is a central component of the LAMP open-source web application software
+            stack.</p>
+        <p id="postgresqlInfo" class="info-box">PostgreSQL is a powerful, open-source object-relational database system
+            known for its reliability, robustness, and support for advanced features. It is commonly used in large-scale
+            applications and enterprise environments.</p>
+        <p id="sqliteInfo" class="info-box">SQLite is a self-contained, serverless, zero-configuration, transactional
+            SQL database engine. It is embedded directly into the end program and requires minimal setup, making it
+            ideal for small to medium-sized applications.</p>
+        <p id="azureInfo" class="info-box">Azure SQL Database is a fully managed relational database service provided by
+            Microsoft Azure. It offers high availability, built-in intelligence, and scalable performance with built-in
+            security and compliance features.</p>
+        <p id="amazonInfo" class="info-box">Amazon Relational Database Service (RDS) is a managed database service
+            provided by Amazon Web Services (AWS) that makes it easy to set up, operate, and scale a relational database
+            in the cloud. It supports several database engines including MySQL, PostgreSQL, Oracle, SQL Server, and
+            MariaDB.</p>
+        <p id="googleInfo" class="info-box">Google Cloud SQL is a fully-managed relational database service provided by
+            Google Cloud Platform. It supports popular database engines like MySQL, PostgreSQL, and SQL Server, offering
+            high availability, scalability, and ease of management.</p>
+    </div>
+    <footer>
+        <div style="background-color: #333; padding: 10px;">
+            <p style="color: #fff; margin: 0;">Powered by <a href="https://training.webasha.com" target="_blank"
+                    style="color: #fff; text-decoration: none;">Webasha</a></p>
+        </div>
+    </footer>
+    <script>
+        function showInfo(tech) {
+            var infoBoxes = document.getElementsByClassName("info-box");
+            for (var i = 0; i < infoBoxes.length; i++) {
+                infoBoxes[i].style.display = "none";
+            }
+            document.getElementById(tech + "Info").style.display = "block";
+        }
+    </script>
 
 </body>
 
